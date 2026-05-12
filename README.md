@@ -6,41 +6,23 @@ Built for Mother's Day. Shareable on LinkedIn. Mobile-optimized.
 
 ---
 
-## Deploy to GitHub Pages (5 minutes)
+## Deploy to GitHub Pages
 
-### 1. Create a new GitHub repo
+The repo includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically builds and deploys the site on every push to `main`.
 
-Go to [github.com/new](https://github.com/new) and create a new **public** repository.  
-Name it something like `working-parent-simulator`.
+### One-time setup
 
-### 2. Push this code to your repo
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
-git push -u origin main
-```
-
-### 3. Enable GitHub Pages
-
-1. Go to your repo on GitHub
+1. Go to the repo on GitHub: [annahlatane/working-parent](https://github.com/annahlatane/working-parent)
 2. Click **Settings** → **Pages** (left sidebar)
-3. Under **Source**, select **Deploy from a branch**
-4. Set branch to **gh-pages**, folder to **/ (root)**
-5. Click **Save**
+3. Under **Source**, select **GitHub Actions**
+4. Click **Save**
 
-### 4. Wait ~2 minutes
+That's it. The next push to `main` (or a manual trigger from the **Actions** tab) will deploy the site.
 
-GitHub Actions will automatically build and deploy when you push to `main`.  
-Watch the progress under the **Actions** tab.
-
-### 5. Your game is live at:
+### Your game is live at:
 
 ```
-https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/
+https://annahlatane.github.io/working-parent/
 ```
 
 That's the link to share on LinkedIn. ✅
