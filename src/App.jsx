@@ -38,20 +38,20 @@ const SCENES = [
       {
         text: "Coffee. Non-negotiable.", emoji: "☕",
         pregnantText: "Decaf. Still non-negotiable.",
-        deltas: { sanity: 15, kidJoy: 0, career: -5 },
-        feedback: "The correct answer. You feel almost human by 6:47am.",
-        pregnantFeedback: "It's decaf, but you need the ritual. You feel approximately 40% human by 6:50am.",
+        deltas: { sanity: 8, kidJoy: 0, career: -5 },
+        feedback: "The correct answer. You feel approximately human by 6:47am.",
+        pregnantFeedback: "It's decaf, but you need the ritual. You feel approximately 35% human by 6:50am.",
       },
       {
         text: "Check emails. Get a head start.", emoji: "📧",
-        deltas: { sanity: -10, kidJoy: 0, career: 10 },
-        feedback: "14 new emails since midnight. Three marked urgent. One is a company newsletter.",
+        deltas: { sanity: -10, kidJoy: -5, career: 10 },
+        feedback: "14 new emails since midnight. Three marked urgent. One is a company newsletter. Both kids find you at the laptop and immediately want something.",
       },
       {
         text: "Lay still. Hope it's Saturday.", emoji: "😴",
-        deltas: { sanity: -5, kidJoy: 0, career: -10 },
-        feedback: "It is not Saturday. Both children will confirm this shortly.",
-        singleFeedback: "It is not Saturday. Both children will confirm this shortly, and there is no one else to send.",
+        deltas: { sanity: -5, kidJoy: 8, career: -10 },
+        feedback: "It is not Saturday. Both kids crawl into bed with you. It's actually kind of wonderful for exactly four minutes before the day begins.",
+        singleFeedback: "It is not Saturday. Both kids crawl in with you. Four minutes of warmth before the day claims everything.",
       },
     ]
   },
@@ -64,21 +64,21 @@ const SCENES = [
     choices: [
       {
         text: "Stand firm. The coat goes on.", emoji: "🧥",
-        deltas: { sanity: -15, kidJoy: -10, career: 0 },
-        feedback: "Seven minutes of negotiation. You leave 4 minutes late. The coat is on. The 2-year-old was in the pantry.",
-        singleFeedback: "Seven minutes of coat negotiation while tracking the 2-year-old by sound. Coat on. Late. 2-year-old was in the pantry eating crackers. Fine.",
-        pregnantFeedback: "Seven minutes. You had to crouch to make eye contact and getting back up took a moment. Coat on. Late.",
+        deltas: { sanity: -15, kidJoy: -10, career: 5 },
+        feedback: "Seven minutes of negotiation. You leave 4 minutes late. The coat is on. You held the line. The 2-year-old was in the pantry.",
+        singleFeedback: "Seven minutes of coat negotiation while tracking the 2-year-old by sound. Late. Coat on. You held the line. 2-year-old was in the pantry eating crackers.",
+        pregnantFeedback: "Seven minutes. You had to crouch to make eye contact and getting back up took a moment. Late. Coat on. You held the line.",
       },
       {
         text: "Bring it along. Let the cold be the teacher.", emoji: "🥶",
-        deltas: { sanity: 10, kidJoy: -5, career: 5 },
+        deltas: { sanity: 5, kidJoy: -5, career: 5 },
         feedback: "Cold in 90 seconds. Coat on with zero argument. Nobody says anything. The 2-year-old has been located — fine.",
       },
       {
         text: "Layer three shirts under the outfit and call it done.", emoji: "🧅",
-        deltas: { sanity: 10, kidJoy: 10, career: 5 },
-        feedback: "You leave on time. The daycare teacher raises an eyebrow at the layering situation. You drive away.",
-        singleFeedback: "Coats optional. Time is not. You leave on schedule, which is its own small victory.",
+        deltas: { sanity: -5, kidJoy: 10, career: 5 },
+        feedback: "You leave on time. It took four attempts and one near-meltdown to get the third shirt on. The daycare teacher raises an eyebrow. You drive away.",
+        singleFeedback: "Coats optional. Time is not. You leave on schedule. The shirt situation took longer than it should have.",
       },
     ]
   },
@@ -91,7 +91,7 @@ const SCENES = [
     choices: [
       {
         text: "Join the call, then find backup care fast.", emoji: "🆘",
-        deltas: { sanity: -15, kidJoy: 5, career: 10 },
+        deltas: { sanity: -15, kidJoy: -5, career: 10 },
         feedback: "You present while texting 9 people. Your neighbor picks up the 2-year-old. You owe her three dinners and your undying loyalty.",
         singleFeedback: "You present while your mom rearranges her entire day. She cancels book club without being asked. You owe her everything. She says you owe her nothing. You owe her everything.",
       },
@@ -119,9 +119,9 @@ const SCENES = [
     choices: [
       {
         text: "Set them up with Bluey and work from the next room.", emoji: "📺",
-        deltas: { sanity: 10, kidJoy: 5, career: 10 },
-        feedback: "Four episodes of Bluey. Then four more. A precedent has been set that will outlast this illness by months.",
-        pregnantFeedback: "Four episodes of Bluey. You sit down for the first time today. You nearly fall asleep. You do not fall asleep. Barely.",
+        deltas: { sanity: -5, kidJoy: 5, career: 10 },
+        feedback: "Four episodes of Bluey. Then four more. A precedent has been set that will outlast this illness by months. You check on them and feel a familiar twinge about the screen time.",
+        pregnantFeedback: "Four episodes of Bluey. You sit down for the first time today. You nearly fall asleep. You feel a twinge about the screen time. You do not fall asleep. Barely.",
       },
       {
         text: "Check on them between every call.", emoji: "🤗",
@@ -146,14 +146,13 @@ const SCENES = [
     choices: [
       {
         text: "Kill the camera. Immediately.", emoji: "🚫",
-        deltas: { sanity: -5, kidJoy: 0, career: -5 },
-        feedback: "You rejoin 45 seconds later with zero explanation. The client pretends nothing happened. Mutual respect established.",
+        deltas: { sanity: 0, kidJoy: -5, career: -5 },
+        feedback: "You rejoin 45 seconds later with zero explanation. The client pretends nothing happened. Mutual respect established. At least you didn't have to keep presenting.",
       },
       {
         text: "Keep going. This is your life now.", emoji: "💪",
-        deltas: { sanity: 10, kidJoy: 5, career: 10 },
+        deltas: { sanity: 6, kidJoy: 5, career: 5 },
         feedback: "You don't flinch. The 2-year-old eventually wanders back out. You close the deal. Client emails after: 'best meeting energy all quarter.'",
-        singleFeedback: "You don't flinch. You close the deal. The 2-year-old eventually wanders back out on their own. Because of course you do.",
         pregnantFeedback: "You don't flinch. The client asks if they can send a gift. You say focus on the deliverables. You close the deal.",
       },
       {
@@ -174,7 +173,7 @@ const SCENES = [
     choices: [
       {
         text: "Hard mute. Handle it. Rejoin like nothing happened.", emoji: "🤫",
-        deltas: { sanity: -10, kidJoy: 5, career: 10 },
+        deltas: { sanity: -10, kidJoy: 0, career: 10 },
         feedback: "Four minutes. Back on the call, mid-sentence. You have done this before and you will do it again.",
         singleFeedback: "Four minutes of pure logistics. Back mid-sentence. You are a professional in every sense of the word.",
       },
@@ -186,7 +185,7 @@ const SCENES = [
       },
       {
         text: "Coach the 2-year-old through self-cleanup from 10 feet away.", emoji: "🎙️",
-        deltas: { sanity: -15, kidJoy: -5, career: 5 },
+        deltas: { sanity: -15, kidJoy: -15, career: 5 },
         feedback: "They are 2. This does not go as planned. You stayed on the call, technically.",
         singleFeedback: "They are 2. It is now a larger situation. You stayed on the call. That's all that can be said.",
       },
@@ -201,14 +200,14 @@ const SCENES = [
     choices: [
       {
         text: "Hold them through it. No negotiating.", emoji: "🫂",
-        deltas: { sanity: -15, kidJoy: 15, career: -10 },
+        deltas: { sanity: -15, kidJoy: 10, career: -10 },
         feedback: "18 minutes. They eventually go still against your chest. You both needed that. You leave for pickup a little puffy-eyed.",
         singleFeedback: "18 minutes, your arms, no backup. They go still against your chest. You leave for pickup a little puffy-eyed. That's allowed.",
         pregnantFeedback: "You sit on the floor and hold them for 18 minutes. Getting back up requires a plan. You make it to pickup with 4 minutes to spare.",
       },
       {
         text: "Find another screen. Not today's battle.", emoji: "📺",
-        deltas: { sanity: 10, kidJoy: -5, career: 10 },
+        deltas: { sanity: 10, kidJoy: -15, career: 10 },
         feedback: "Silence in 45 seconds. You finish your deliverable. You feel like you lost something. Complicated.",
       },
       {
@@ -228,8 +227,8 @@ const SCENES = [
     choices: [
       {
         text: "Hard mute. Slide snacks across the counter without breaking eye contact with the camera.", emoji: "🍿",
-        deltas: { sanity: 5, kidJoy: 5, career: 10 },
-        feedback: "The 4-year-old accepts the snacks. The 2-year-old throws theirs. You do not react visibly. You are a professional.",
+        deltas: { sanity: 5, kidJoy: -5, career: 10 },
+        feedback: "The 4-year-old accepts the snacks. The 2-year-old throws theirs. You do not react visibly. You are a professional. Neither kid got the hello they were looking for.",
         singleFeedback: "Snacks deployed. The 4-year-old accepts. The 2-year-old throws theirs on the floor. You retrieve them on mute, still nodding. An act of extraordinary composure.",
       },
       {
@@ -240,10 +239,10 @@ const SCENES = [
       },
       {
         text: "Put the 4-year-old in charge of snacks for both of them.", emoji: "👑",
-        deltas: { sanity: 10, kidJoy: 10, career: 5 },
-        feedback: "The 4-year-old takes this responsibility extremely seriously. They select cheese sticks and report back. You stay on the call. This was the right call.",
-        singleFeedback: "The 4-year-old rises to the occasion. Cheese sticks. Distributed. The 2-year-old accepts them. You stay on the call. This is called delegation and you are very good at it.",
-        pregnantFeedback: "The 4-year-old selects cheese sticks with great authority. You remain on the call. The 2-year-old eats. Something worked and you will take it.",
+        deltas: { sanity: -3, kidJoy: 10, career: 5 },
+        feedback: "The 4-year-old takes this responsibility extremely seriously. Cheese sticks retrieved. You stay on the call. You will deal with the kitchen situation afterward.",
+        singleFeedback: "The 4-year-old rises to the occasion. Cheese sticks. Distributed. You stay on the call. You will deal with the kitchen situation afterward.",
+        pregnantFeedback: "The 4-year-old selects cheese sticks with great authority. You remain on the call. You will deal with the kitchen situation afterward.",
       },
     ]
   },
@@ -256,19 +255,19 @@ const SCENES = [
     choices: [
       {
         text: "Cook a real meal. You've still got it.", emoji: "👩‍🍳",
-        deltas: { sanity: -10, kidJoy: 15, career: 0 },
-        feedback: "The pasta was genuinely good. Both kids ate it. The dish situation is tomorrow's problem.",
-        pregnantFeedback: "The pasta was good. You stood at the stove for 20 minutes. You sat down immediately after plating. Worth it.",
+        deltas: { sanity: -10, kidJoy: 15, career: -5 },
+        feedback: "The pasta was genuinely good. Both kids ate it. That was 30 minutes you didn't spend on the deliverable.",
+        pregnantFeedback: "The pasta was good. You stood at the stove for 20 minutes. You sat down immediately after plating. That's 20 minutes you didn't spend on the deliverable. Worth it.",
       },
       {
         text: "Cereal is a nutritionally complete meal.", emoji: "🥣",
-        deltas: { sanity: 10, kidJoy: 5, career: 0 },
-        feedback: "No shame. Both kids ate it without complaint. Pediatricians consider this fine. Probably.",
-        singleFeedback: "No shame. You kept two humans alive and yourself employed today. Cereal is genuinely a win.",
+        deltas: { sanity: -3, kidJoy: 12, career: 0 },
+        feedback: "Both kids lose their minds with joy. You feel a quiet nagging about vegetables. They will survive. Probably.",
+        singleFeedback: "Both kids cheer. You feel a quiet nagging about vegetables. You kept two humans alive and yourself employed today. Cereal is a win.",
       },
       {
         text: "Order delivery. Absolutely zero regrets.", emoji: "🛵",
-        deltas: { sanity: 15, kidJoy: 10, career: 0 },
+        deltas: { sanity: 8, kidJoy: 10, career: -5 },
         feedback: "Doorbell rings. Brief feral child moment. Then everyone is full and nobody cooked anything.",
         singleFeedback: "Ordered from the car at pickup. Arrived 8 minutes after you got home. You planned this. You are a logistics professional.",
       },
@@ -290,16 +289,16 @@ const SCENES = [
       },
       {
         text: "Lights out. Hold the line.", emoji: "🔦",
-        deltas: { sanity: 10, kidJoy: -5, career: 10 },
+        deltas: { sanity: 6, kidJoy: -10, career: 10 },
         feedback: "Six minutes of protest from both rooms. Then silence. Bittersweet, efficient victory.",
         singleFeedback: "Six minutes, both rooms. Then silence. You stand in the hall just breathing for a second. Then back to work.",
       },
       {
         text: "You fall asleep reading to them.", emoji: "😴",
-        deltas: { sanity: 15, kidJoy: 20, career: -20 },
-        feedback: "Midnight. Two sleeping kids. Work completely undone. You don't regret a single second.",
-        singleFeedback: "Midnight. Two sleeping kids. You're still in their room. The work is undone. You don't regret a single second of this entire impossible day.",
-        pregnantFeedback: "Midnight. Both kids asleep. You're still on the floor with a pillow wedged under your belly. The work is undone. You don't regret a single second.",
+        deltas: { sanity: 15, kidJoy: 20, career: -25 },
+        feedback: "Midnight. Two sleeping kids. The deadline missed. You don't regret a single second.",
+        singleFeedback: "Midnight. Two sleeping kids. You're still in their room. The deadline missed. You don't regret a single second of this entire impossible day.",
+        pregnantFeedback: "Midnight. Both kids asleep. You're still on the floor with a pillow wedged under your belly. The deadline missed. You don't regret a single second.",
       },
     ]
   },
@@ -307,39 +306,45 @@ const SCENES = [
 
 const ARCHETYPES = [
   {
-    condition: (s, k, c) => s > 68 && k > 68 && c > 68,
+    // ~11% — all three stats genuinely high, requires consistent good choices
+    condition: (s, k, c) => s > 74 && k > 74 && c > 74,
     emoji: "🦄", title: "The Unicorn",
     desc: "You nailed all three metrics with two kids under five. Scientists cannot explain you. Please write a book. We will all buy it.",
     share: "Apparently I'm a mythical creature. Who knew?"
   },
   {
-    condition: (s, k, c) => c > s + 20 && c > k + 10,
-    emoji: "📊", title: "The PowerPoint Parent",
-    desc: "Slides: immaculate. School events: recalled differently by each party. The career is very, very real.",
-    share: "Optimized for performance reviews and also parenthood. Mostly performance reviews."
-  },
-  {
-    condition: (s, k, c) => k > s + 15 && k > c + 10,
-    emoji: "🥪", title: "The Snack Packer",
-    desc: "Your kids' emotional development is genuinely thriving. Your inbox is a crime scene. Trade-offs were made. Worth it.",
-    share: "My kids will be emotionally secure. My inbox will not."
-  },
-  {
-    condition: (s, k, c) => s > k + 20 && s > c + 10,
+    // ~10% — sanity protected, career sacrificed for it (checked before PP/Snack to give it space)
+    condition: (s, k, c) => s >= 77 && c <= 62,
     emoji: "🧘", title: "Zen Master in Disguise",
-    desc: "You found peace inside the chaos. Either deeply evolved, or you've discovered something the rest of us haven't. Share your secrets.",
+    desc: "You protected your peace at every turn. The career took some hits. You are, somehow, okay with this. Share your secrets.",
     share: "Somehow at peace with all of this. Therapy helps. So does lowering expectations."
   },
   {
-    condition: (s, k, c) => s < 50 && k < 50 && c < 50,
+    // ~24% — career clearly dominant, sanity paid the price
+    condition: (s, k, c) => c >= 80 && s < 68,
+    emoji: "📊", title: "The PowerPoint Parent",
+    desc: "Slides: immaculate. School events: recalled differently by each party. The career is very, very real — and it cost you something.",
+    share: "Optimized for performance reviews and also parenthood. Mostly performance reviews."
+  },
+  {
+    // ~22% — career genuinely tanked from kid-first choices
+    condition: (s, k, c) => c <= 55,
+    emoji: "🥪", title: "The Snack Packer",
+    desc: "Your kids are thriving. Your career is somewhere on the floor. Trade-offs were made consciously, lovingly, and repeatedly.",
+    share: "My kids will be emotionally secure. My inbox will not."
+  },
+  {
+    // ~9% — both sanity and career are low, ground down from every direction
+    condition: (s, k, c) => s <= 65 && c <= 65,
     emoji: "💯", title: "Authentically, Honestly Real",
-    desc: "Nobody is fully okay. Two kids under five is genuinely a lot. Everyone turns out fine. This is the way.",
+    desc: "You are ground down in both directions. Two kids under five is genuinely a lot. Nobody is fully okay. Everyone turns out fine.",
     share: "Just trying to keep everyone alive and employed. The bar is relative."
   },
   {
+    // ~24% — the real median: nothing peaked, nothing crashed
     condition: () => true,
     emoji: "🤹", title: "The Juggler",
-    desc: "Nothing perfect, everything functional. The median working parent of two kids under five — and that is more impressive than it sounds.",
+    desc: "Nothing perfect, everything functional. You are the median working parent of two kids under five — and that is more impressive than it sounds.",
     share: "Dropping balls gracefully since becoming a parent of two."
   },
 ];
